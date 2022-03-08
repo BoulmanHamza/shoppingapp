@@ -8,25 +8,25 @@ import javax.swing.JOptionPane;
 public class ConnectionBd {
 	
 	 private static Connection con = null;
-	    static
-	    {
-	        String url = "jdbc:mysql://localhost:3306/shopping";
-	        String user = "root";
-	        String pass = "";
-	        try {
-	        	System.out.println("text");
-	            Class.forName("com.mysql.cj.jdbc.Driver");
-	            System.out.println("text");
-	            con = DriverManager.getConnection(url, user, pass);
-	            System.out.println("Okkk");
-	        }
-	        catch (Exception e) {
-	            e.printStackTrace();
-	        }
-	    }
 
 	    public static Connection getCnx() {
-			return con;
+	    	if(con==null) {
+	    		String url = "jdbc:mysql://localhost:3306/shopping";
+		        String user = "root";
+		        String pass = "";
+		        try {
+		            Class.forName("com.mysql.cj.jdbc.Driver");
+		            con = DriverManager.getConnection(url, user, pass);
+		            System.out.println("Okkk");
+		            return con;
+		        }
+		        catch (Exception e) {
+		            e.printStackTrace();
+		        }
+	    	}
+	    		return con;
+	    	
+			
 		}
 	    
 		public static void discconnect(){
