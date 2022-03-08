@@ -1,19 +1,19 @@
 package com.shopping.model;
 
-public class article {
+public class Article {
 	private int idArticle;
 	private String nom;
 	private double prix;
 	
 	
 	
-	public article() {
+	public Article() {
 		super();
 	}
 
 
 
-	public article(int id_article, String nom, double prix) {
+	public Article(int id_article, String nom, double prix) {
 		super();
 		this.idArticle = id_article;
 		this.nom = nom;

@@ -1,13 +1,13 @@
 package com.shopping.model;
 
-public class produit_facture {
+public class ProduitFacture {
 	private Integer numFacture;
 	private int idArticle;
 	private int nombre;
-	public produit_facture() {
+	public ProduitFacture() {
 		super();
 	}
-	public produit_facture(Integer numFacture, int idArticle, int nombre) {
+	public ProduitFacture(Integer numFacture, int idArticle, int nombre) {
 		super();
 		this.numFacture = numFacture;
 		this.idArticle = idArticle;

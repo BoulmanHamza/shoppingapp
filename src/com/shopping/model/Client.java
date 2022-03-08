@@ -1,13 +1,13 @@
 package com.shopping.model;
 
-public class client {
+public class Client {
 	private int idClient;
 	private String nom;
 	private String prenom;
-	public client() {
+	public Client() {
 		super();
 	}
-	public client(int id_client, String nom, String prenom) {
+	public Client(int id_client, String nom, String prenom) {
 		super();
 		this.idClient = id_client;
 		this.nom = nom;

@@ -2,14 +2,14 @@ package com.shopping.model;
 
 import java.util.Date;
 
-public class facture {
+public class Facture {
 	private int numFacture;
 	private Date dateFacture;
 	private int idClient;
-	public facture() {
+	public Facture() {
 		super();
 	}
-	public facture(int numFacture, Date dateFacture, int idClient) {
+	public Facture(int numFacture, Date dateFacture, int idClient) {
 		super();
 		this.numFacture = numFacture;
 		this.dateFacture = dateFacture;
