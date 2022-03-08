@@ -47,6 +47,13 @@ public class Article {
 	public void setPrix(double prix) {
 		this.prix = prix;
 	}
+
+
+
+	@Override
+	public String toString() {
+		return "Article [idArticle=" + idArticle + ", nom=" + nom + ", prix=" + prix + "]";
+	}
 	
 	
 	

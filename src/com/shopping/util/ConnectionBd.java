@@ -9,6 +9,7 @@ public class ConnectionBd {
 	
 	 private static Connection con = null;
 
+
 	    public static Connection getCnx() {
 	    	if(con==null) {
 	    		String url = "jdbc:mysql://localhost:3306/shopping";
