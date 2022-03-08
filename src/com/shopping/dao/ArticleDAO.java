@@ -2,12 +2,12 @@ package com.shopping.dao;
 
 import java.util.List;
 
-import com.shopping.model.article;
+import com.shopping.model.Article;
 
 public interface ArticleDAO {
-	public void create(article a);
-	public void delete(article a);
-	public article findById(int IdArticle);
-	public List<article> findAll();
-	public void update(article a);
+	public void create(Article a);
+	public void delete(Article a);
+	public Article findById(int IdArticle);
+	public List<Article> findAll();
+	public void update(Article a);
 }
