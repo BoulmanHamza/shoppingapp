@@ -11,7 +11,7 @@ public class Article {
 		super();
 	}
 
-	public Article(int id_article, String nom, double prix) {
+	public Article(int id_article, String nom, double prix){
 		super();
 		this.idArticle = id_article;
 		this.nom = nom;
@@ -22,8 +22,8 @@ public class Article {
 		return idArticle;
 	}
 
-	public void setId_article(int id_article) {
-		this.idArticle = id_article;
+	public void setId_article(int idArticle) {
+		this.idArticle = idArticle;
 	}
 
 

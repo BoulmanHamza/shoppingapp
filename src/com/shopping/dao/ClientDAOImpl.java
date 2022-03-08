@@ -12,13 +12,14 @@ import com.shopping.util.ConnectionBd;
 public class ClientDAOImpl implements ClientDAO{
 
 	@Override
-	public void create(Client c) throws SQLException {
+	public void create(Client client) throws SQLException {
 		String Query="insert into client (id_client,nom,prenom) Values (?,?,?)";
 		PreparedStatement ps=ConnectionBd.getCnx().prepareStatement(Query);
-		ps.setInt(1, c.getId_client());
-		ps.setString(2, c.getNom());
-		ps.setString(3, c.getPrenom());
+		ps.setInt(1, client.getId_client());
+		ps.setString(2, client.getNom());
+		ps.setString(3, client.getPrenom());
 		ps.executeUpdate();
+		 
 	}
 
 	@Override
@@ -57,32 +58,29 @@ public class ClientDAOImpl implements ClientDAO{
 	@Override
 	public List<Client> findAll() throws SQLException{
 		String SelectQuery="SELECT * from Client";
-        List<Client> list=new ArrayList<>();
+        List<Client> listClients=new ArrayList<>();
         try{
             PreparedStatement ps=ConnectionBd.getCnx().prepareStatement(SelectQuery);
             ResultSet rs;
             rs=ps.executeQuery();
             while(rs.next())
             {
-                int id=rs.getInt(1);
-                String nom=rs.getString(2);
-                String prenom=rs.getString(3);
-                list.add(new Client(id,nom,prenom));
+                listClients.add(new Client(rs.getInt(1),rs.getString(2),rs.getString(3)));
             }
         }
         catch(Exception e)
         {
             System.out.println("Error in getData"+e);
         }
-        return list;
+        return listClients;
 	}
 
 	@Override
-	public void update(Client c) throws SQLException{
-		String updateQuery="Update Client set nom=?, prenom=? where id_client="+c.getId_client();
+	public void update(Client client) throws SQLException{
+		String updateQuery="Update Client set nom=?, prenom=? where id_client="+client.getId_client();
             PreparedStatement ps= ConnectionBd.getCnx().prepareStatement(updateQuery);
-            ps.setString(1,c.getNom());
-            ps.setString(2,c.getPrenom());
+            ps.setString(1,client.getNom());
+            ps.setString(2,client.getPrenom());
             ps.executeUpdate();
 		
 	}
