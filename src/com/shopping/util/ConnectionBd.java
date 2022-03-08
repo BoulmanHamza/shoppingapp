@@ -10,7 +10,7 @@ public class ConnectionBd {
 	 private static Connection con = null;
 	    static
 	    {
-	        String url = "jdbc:mysql://localhost:3306/bd_shopping";
+	        String url = "jdbc:mysql://localhost:3306/shopping";
 	        String user = "root";
 	        String pass = "";
 	        try {
