@@ -11,8 +11,6 @@ public class Article {
 		super();
 	}
 
-
-
 	public Article(int id_article, String nom, double prix) {
 		super();
 		this.idArticle = id_article;

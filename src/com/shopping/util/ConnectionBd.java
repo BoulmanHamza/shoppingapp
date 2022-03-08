@@ -14,7 +14,9 @@ public class ConnectionBd {
 	        String user = "root";
 	        String pass = "";
 	        try {
-	            Class.forName("com.mysql.jdbc.Driver");
+	        	System.out.println("text");
+	            Class.forName("com.mysql.cj.jdbc.Driver");
+	            System.out.println("text");
 	            con = DriverManager.getConnection(url, user, pass);
 	            System.out.println("Okkk");
 	        }
