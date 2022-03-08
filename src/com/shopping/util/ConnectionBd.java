@@ -10,7 +10,7 @@ public class ConnectionBd {
 	 private static Connection con = null;
 	    static
 	    {
-	        String url = "jdbc:mysql://localhost:3306/shopping";
+	        String url = "jdbc:mysql://localhost:3306/bd_shopping";
 	        String user = "root";
 	        String pass = "";
 	        try {
@@ -18,7 +18,7 @@ public class ConnectionBd {
 	            Class.forName("com.mysql.cj.jdbc.Driver");
 	            System.out.println("text");
 	            con = DriverManager.getConnection(url, user, pass);
-	            System.out.println("Okkk");
+	            System.out.println("Connecté...");
 	        }
 	        catch (Exception e) {
 	            e.printStackTrace();
